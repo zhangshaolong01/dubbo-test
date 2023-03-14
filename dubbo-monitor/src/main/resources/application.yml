@@ -1,0 +1,18 @@
+server:
+  port: 9090
+dubbo:
+  #服务器名称唯一
+  application:
+    name: monitor
+    qosEnable: false
+  #注册中心配置，使用zookeeper做注册中心
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  protocol:
+    #使用dubbo协议，端口默认20880
+    port: 20889
+    name: dubbo
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/test
